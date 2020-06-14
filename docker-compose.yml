@@ -1,0 +1,22 @@
+version: "2"
+services:
+  auth:
+    build: ./auth
+    ports:
+      - "3001:3001"
+    depends_on:
+      - mongo
+  user:
+    build: ./user
+    ports:
+      - "3002:3002"
+    depends_on:
+      - mongo  
+  mongo:
+    image: mongo
+    ports:
+      - "27017:27017"
+    volumes:
+      - data-volume:/data/db
+volumes:
+  data-volume:

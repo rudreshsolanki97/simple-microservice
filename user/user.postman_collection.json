@@ -1,0 +1,67 @@
+{
+	"info": {
+		"_postman_id": "d8f8e270-c615-4b0f-b88a-8eb697a5a026",
+		"name": "user",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "/sign-up",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"firstName\":\"john\",\n    \"lastName\":\"doe\",\n    \"password\":\"123\",\n    \"email\":\"john.doe@gmail.com\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3002/sign-up",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3002",
+					"path": [
+						"sign-up"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/get-profile",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZWU2OGIwNzI4ZTc4NDAwMWQ2NTZjNzEiLCJlbWFpbCI6ImpvaG4uZG9lQGdtYWlsLmNvbSIsImZpcnN0TmFtZSI6ImpvaG4iLCJsYXN0TmFtZSI6ImRvZSIsImNyZWF0ZWRBdCI6IjIwMjAtMDYtMTRUMjA6Mzk6MzUuNzA2WiIsInVwZGF0ZWRBdCI6IjIwMjAtMDYtMTRUMjA6Mzk6MzUuNzA2WiIsIl9fdiI6MCwiaWF0IjoxNTkyMTY3MTgwLCJleHAiOjE1OTIxNjgwODB9.kVNMBLcPYUTYlACPV24EhctbRfuNpOqkzxRdzu-Zn0Q",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3002/get-profile",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3002",
+					"path": [
+						"get-profile"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
